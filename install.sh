@@ -19,7 +19,7 @@ if [ -f "/etc/debian_version" ]; then
 if [ $ver = "Debian8" ]; then
 	osDebian="yes"
 	apt-get install -y --force-yes wget > /dev/null 2>&1
-	echo "Download install script... "
+	echo -en "Download install script... "
 	rm -f ${d}/deb.install.sh
 	wget --no-check-certificate -t 2 $MIRROR/install/deb.install.sh > /dev/null 2>&1
 	if [ $? -eq 0 ]; then
